@@ -1,0 +1,175 @@
+body, html {
+    background: rgb(0,125,255);
+    background: linear-gradient(90deg, rgba(0,125,255,1) 3%, rgba(33,113,223,1) 35%, rgba(121,9,9,1) 99%);
+  }
+  
+  .header1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lucida Console", "Courier New", "Helvetica";
+    font-size: 2vw;
+    color: white;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
+  
+  .header1:hover {
+    transform: scale(1.10);
+  }
+  
+  .div1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image {
+    border: 5px solid black;
+    margin: 0;
+    max-width: 50vw;
+    max-height: 50vh;
+    margin-bottom: 5vh;
+  }
+  
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    border: 5px solid black;
+    font-size: 5vh;
+    padding: 10px 20px;
+    height: 10vh;
+    width: 40vh;
+    color: white;
+    background-color: #f04d4d;
+  }
+  
+  #button1:hover {
+    background-color: #2b32ff;
+  }
+  
+  #button1:active {
+    transform: scale(0.80);
+  }
+  
+  .div2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer1 {
+    text-align: center;
+    font-family: "Lucida Console", "Courier New", "Helvetica";
+    font-size: 1vw;
+    width: 75%;
+    margin-bottom: 0;
+  }
+
+/* Round-1 code below */
+
+.header2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lucida Console", "Courier New", "Helvetica";
+    font-size: 10vh;
+    margin-top: 5vh;
+}
+
+.header3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lucida Console", "Courier New", "Helvetica";
+    font-size: 5vh;
+    margin-top: 5vh;
+}
+
+.mainDiv {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    max-height: 70vh;
+}
+
+.text2 {
+  background-color: lightgray;
+  border: 1px solid black;
+  margin-bottom: 0px;
+  padding: 2vh;
+  text-align: center;
+}
+
+.text {
+  border: 1px solid black;
+  text-align: center;
+  padding: 5vh;
+  margin: 0;
+}
+
+#inputDiv {
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#input {
+  width: 40vw;
+  padding: 2vh;
+  margin-top: 5vh;
+  border: 2px solid black;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.button2 {
+  padding: 2vh;
+  margin: 2vh;
+  font-size: 4vh;
+  background-color: lightgray;
+}
+
+#scores {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.score {
+  font-size: 4vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+#nextRound {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+#nextButton {
+  padding: 2vh;
+  font-size: 4vh;
+  margin-right: 5vw;
+  background-color: lightgray;
+}
+
+.footer2 {
+  text-align: center;
+  font-size: 200%;
+}
