@@ -10,20 +10,20 @@ let currentQuestion = ''
 function init() {
 
     
-    document.getElementById('guessButton').setAttribute("disabled", "disabled")
-    document.getElementById('passButton').setAttribute("disabled", "disabled")
-    document.getElementById('nextRoundButton').setAttribute("disabled", "disabled")
+    document.getElementById('guessButton2').setAttribute("disabled", "disabled")
+    document.getElementById('passButton2').setAttribute("disabled", "disabled")
+    document.getElementById('nextRoundButton2').setAttribute("disabled", "disabled")
     
     window.alert(`It's ${playerTurn}'s turn!`)
     
-    document.getElementById('category1_200').addEventListener('click', (e) => {
-        document.getElementById('category1_200').innerHTML = '<p>Question #1</p>';
-        currentQuestion = 'category1_200'
-        document.getElementById('guessButton').removeAttribute("disabled")
-        document.getElementById('passButton').removeAttribute("disabled")    
+    document.getElementById('secondCategory1_400').addEventListener('click', (e) => {
+        document.getElementById('secondCategory1_400').innerHTML = '<p>Question #1</p>';
+        currentQuestion = 'secondCategory1_400'
+        document.getElementById('guessButton2').removeAttribute("disabled")
+        document.getElementById('passButton2').removeAttribute("disabled")
     })
 
-    document.getElementById('passButton').addEventListener('click', (e) => {
+    document.getElementById('passButton2').addEventListener('click', (e) => {
         playerTurn = player2
         window.alert(`It's ${playerTurn}'s turn!`)
     })
@@ -68,5 +68,3 @@ let answers = {
     category6_1000: "answer30"
 
 }
-
-
