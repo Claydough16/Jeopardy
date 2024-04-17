@@ -14,17 +14,19 @@
     </div>
     <div class="finalText">
       <p class="finalCategory">FINAL CATEGORY</p>
-      <p class="finalQuestion">FINAL QUESTION</p>
+      <p class="finalQuestion" id="finalQuestion"></p>
     </div>
     <div class="finalInput">
-      <input type="text" class="input2" placeholder="Point bet amount...">
-      <input type="text" class="input2" placeholder="Final answer...">
-      <button class="button3">BET</button>
+      <p class="finalCategory">MAX BET: <p id="maxBet" class="finalCategory">0</p></p>
+      <input type="text" class="input2" id="betInput" placeholder="Point bet amount...">
+      <input type="text" class="input2" id="answerInput" placeholder="Final answer..." disabled>
+      <button class="button3" id="betButton">BET</button>
     </div>
 
     <footer class="footer2">Est 2024</footer>
 
     <!-- Do not change the script source. Allows import/export to work. -->
     <script src="./scripts/index.js" type="module"></script>
+    <script src="./final-jeopardy.js"></script>
   </body>
 </html>
