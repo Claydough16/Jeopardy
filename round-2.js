@@ -29,156 +29,156 @@ player2score = parseInt(GetURLParameter("player2"));
 
 let answers = {
     secondCategory1_400: {
-        answer: "answer31",
-        question: "question31",
+        answer: "Canberra",
+        question: "What is the capital of Australia?",
         points: 400
     },
     secondCategory1_800: {
-        answer: "answer32",
-        question: "question32",
+        answer: "F. Scott Fitzgerald",
+        question: "Who wrote 'The Great Gatsby'?",
         points: 800
     },
     secondCategory1_1200: {
-        answer: "answer33",
-        question: "question33",
+        answer: "Na",
+        question: "What is the chemical symbol for sodium?",
         points: 1200
     },
     secondCategory1_1600: {
-        answer: "answer34",
-        question: "question34",
+        answer: "Earth",
+        question: "Which planet is known as the 'Blue Planet'?",
         points: 1600
     },
     secondCategory1_2000: {
-        answer: "answer35",
-        question: "question35",
+        answer: "Nile",
+        question: "What is the longest river in the world?",
         points: 2000
     },
     secondCategory2_400: {
-        answer: "answer36",
-        question: "question36",
+        answer: "Edvard Munch",
+        question: "Who painted 'The Scream'?",
         points: 400
     },
     secondCategory2_800: {
-        answer: "answer37",
-        question: "question37",
+        answer: "Greenland",
+        question: "What is the largest island in the world?",
         points: 800
     },
     secondCategory2_1200: {
-        answer: "answer38",
-        question: "question38",
+        answer: "Indian Rupee",
+        question: "What is the currency of India?",
         points: 1200
     },
     secondCategory2_1600: {
-        answer: "answer39",
-        question: "question39",
+        answer: "Herman Melville",
+        question: "Who wrote 'Moby Dick'?",
         points: 1600
     },
     secondCategory2_2000: {
-        answer: "answer40",
-        question: "question40",
+        answer: "He",
+        question: "What is the chemical symbol for helium?",
         points: 2000
     },
     secondCategory3_400: {
-        answer: "answer41",
-        question: "question41",
+        answer: "Philippine Sea",
+        question: "What is the largest sea in the world?",
         points: 400
     },
     secondCategory3_800: {
-        answer: "answer42",
-        question: "question42",
+        answer: "Fabian Gottlieb von Bellingshausen",
+        question: "Who was the first person to set foot on Antarctica?",
         points: 800
     },
     secondCategory3_1200: {
-        answer: "answer43",
-        question: "question43",
+        answer: "Africa",
+        question: "What is the hottest continent on Earth?",
         points: 1200
     },
     secondCategory3_1600: {
-        answer: "answer44",
-        question: "question44",
+        answer: "Euclid",
+        question: "Who is known as the 'Father of Geometry'?",
         points: 1600
     },
     secondCategory3_2000: {
-        answer: "answer45",
-        question: "question45",
+        answer: "Ostrich",
+        question: "What is the largest bird in the world?",
         points: 2000
     },
     secondCategory4_400: {
-        answer: "answer46",
-        question: "question46",
+        answer: "Brasília",
+        question: "What is the capital of Brazil?",
         points: 400
     },
     secondCategory4_800: {
-        answer: "answer47",
-        question: "question47",
+        answer: "J.D. Salinger",
+        question: "Who wrote 'The Catcher in the Rye'?",
         points: 800
     },
     secondCategory4_1200: {
-        answer: "answer48",
-        question: "question48",
+        answer: "Ca",
+        question: "What is the chemical symbol for calcium?",
         points: 1200
     },
     secondCategory4_1600: {
-        answer: "answer49",
-        question: "question49",
+        answer: "Mercury",
+        question: "Which planet is known as the 'Evening Star'?",
         points: 1600
     },
     secondCategory4_2000: {
-        answer: "answer50",
-        question: "question50",
+        answer: "Alexander Fleming",
+        question: "Who discovered penicillin?",
         points: 2000
     },
     secondCategory5_400: {
-        answer: "answer51",
-        question: "question51",
+        answer: "Giraffe",
+        question: "What is the tallest animal in the world?",
         points: 400
     },
     secondCategory5_800: {
-        answer: "answer52",
-        question: "question52",
+        answer: "Valentina Tereshkova",
+        question: "Who was the first female astronaut?",
         points: 800
     },
     secondCategory5_1200: {
-        answer: "answer53",
-        question: "question53",
+        answer: "Saltwater crocodile",
+        question: "What is the largest reptile in the world?",
         points: 1200
     },
     secondCategory5_1600: {
-        answer: "answer54",
-        question: "question54",
+        answer: "Leonardo da Vinci",
+        question: "Who painted the 'Mona Lisa'?",
         points: 1600
     },
     secondCategory5_2000: {
-        answer: "answer55",
-        question: "question55",
+        answer: "Pb",
+        question: "What is the chemical symbol for lead?",
         points: 2000
     },
     secondCategory6_400: {
-        answer: "answer56",
-        question: "question56",
+        answer: "Pretoria",
+        question: "What is the capital of South Africa?",
         points: 400
     },
     secondCategory6_800: {
-        answer: "answer57",
-        question: "question57",
+        answer: "Leo Tolstoy",
+        question: "Who wrote 'War and Peace'?",
         points: 800
     },
     secondCategory6_1200: {
-        answer: "answer58",
-        question: "question58",
+        answer: "K",
+        question: "What is the chemical symbol for potassium?",
         points: 1200
     },
     secondCategory6_1600: {
-        answer: "answer59",
-        question: "question59",
+        answer: "Vigdís Finnbogadóttir",
+        question: "Who was the first female president of a country?",
         points: 1600
     },
     secondCategory6_2000: {
-        answer: "answer60",
-        question: "question60",
+        answer: "Femur",
+        question: "What is the largest bone in the human body?",
         points: 2000
     }
-}
+};
 
 let questionLimit = Object.keys(answers).length;
 
@@ -208,13 +208,6 @@ function init() {
             this.removeEventListener('click', questionHandler);
         })
     });
-    
-    // document.getElementById('secondCategory1_800').addEventListener('click', (e) => {
-    //     document.getElementById('secondCategory1_800').innerHTML = `<p>${answers[value].question}</p>`;
-    //     currentQuestion = 'secondCategory1_800'
-    //     document.getElementById('guessButton2').removeAttribute("disabled")
-    //     document.getElementById('passButton2').removeAttribute("disabled")
-    // })
 
     document.getElementById('guessButton2').addEventListener('click', (e) => {
         if (document.getElementById('input').value == answers[currentQuestion].answer) {
@@ -253,7 +246,7 @@ function init() {
         }
         if (questionsAnswered == questionLimit || player1score >= 30000 || player2score >= 30000) {
             window.alert("Time for Final Jeopardy! Click the Final Round Button to advance.")
-            document.getElementById('nextRoundButton').removeAttribute('disabled');
+            document.getElementById('nextRoundButton2').removeAttribute('disabled');
         }
     })
 

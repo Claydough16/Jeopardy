@@ -9,7 +9,7 @@ let player1answer = "";
 let player1bet = 0;
 let player2answer = "";
 let player2bet = 0;
-let finalanswer = "42";
+let finalanswer = "Cancun";
 
 let numBets = 0;
 let numAnswers = 0;
@@ -82,7 +82,7 @@ function init () {
                 phase = "guess";
                 document.getElementById('answerInput').removeAttribute("disabled");
                 document.getElementById('betInput').setAttribute("disabled", "disabled");
-                document.getElementById('finalQuestion').innerText = "FINAL QUESTION..."
+                document.getElementById('finalQuestion').innerText = "Where did Justin go on vacation for a week?"
                 document.getElementById('betButton').innerText = "ANSWER";
                 window.alert(`${playerTurn}, your guess please.`);
             } else {
@@ -111,20 +111,23 @@ function init () {
                 numAnswers++;
             }
             if (numAnswers >= 2) {
-                if (player1score > player2score) {
+                if (player1score == player2score) {
+                    window.alert('Aww man it was a tie!\n Good luck next time!')
+                    window.alert('Thank you for playing my game!')
+                    document.body.innerHTML = ''
+                    return;
+                } else if (player1score > player2score) {
                     winner = player1;
-                } else {
+                } else if (player2score > player1score) {
                     winner = player2;
                 }
                 document.getElementById('finalQuestion').innerText = `ANSWER: ${finalanswer}`
                 window.alert(`Congrats! ${winner} won the game!!!\nPlayer 1: ${player1score} | Player 2: ${player2score}`)
+                window.alert(`Thank you for playing my game!`)
+                document.body.innerHTML = ''
+                return;
             } else {
                 window.alert(`${playerTurn}, your guess please.`);
-                // if (playerTurn == player1) {
-                //     document.getElementById('maxBet').innerText = `${player1score}`
-                // } else {
-                //     document.getElementById('maxBet').innerText = `${player2score}`
-                // }
                 document.getElementById('betInput').value = ""
                 document.getElementById('answerInput').value = "";
             }
