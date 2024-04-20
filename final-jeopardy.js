@@ -37,6 +37,7 @@ player2score = parseInt(GetURLParameter("player2"));
 let winner = "";
 
 function init () {
+    document.getElementById("currentPlayerTurn").innerText = `${playerTurn}'s Turn`
     document.getElementById('maxBet').innerText = `${player1score}`;
 
     document.getElementById('betInput').addEventListener('change', (e) => {
@@ -60,7 +61,9 @@ function init () {
     document.getElementById('betButton').addEventListener('click', (e) => {
         if (phase == "bet") {
             if (playerTurn == player1) {
-                if (player1bet > player1score || player1bet < 0) {
+                if (player1score < 0) {
+                    player1bet = 0
+                } else if (player1bet > player1score || player1bet < 0) {
                     window.alert("Make a valid bet loser");
                     return;
                 }
@@ -69,7 +72,9 @@ function init () {
                 document.getElementById('betInput').value = ""
                 document.getElementById('maxBet').innerText = `${player2score}`
             } else {
-                if (player2bet > player2score || player2bet < 0) {
+                if (player2score < 0) {
+                    player2bet = 0
+                } else if (player2bet > player2score || player2bet < 0) {
                     window.alert("Make a valid bet loser");
                     return;
                 }
@@ -88,6 +93,7 @@ function init () {
             } else {
                 window.alert(`${playerTurn}'s turn to bet`);
             }
+            document.getElementById("currentPlayerTurn").innerText = `${playerTurn}'s Turn`
         } else {
             if (playerTurn == player1) {
                 if (player1answer == finalanswer) {
@@ -110,12 +116,14 @@ function init () {
                 document.getElementById('answerInput').value = "";
                 numAnswers++;
             }
+            document.getElementById("currentPlayerTurn").innerText = `${playerTurn}'s Turn`
             if (numAnswers >= 2) {
                 if (player1score == player2score) {
-                    window.alert('Aww man it was a tie!\n Good luck next time!')
-                    window.alert('Thank you for playing my game!')
-                    document.body.innerHTML = ''
-                    return;
+                window.alert('Aww man it was a tie!\nGood luck next time!')
+                window.alert(`The final answer was ${finalanswer}`)
+                window.alert('Thank you for playing my game!')
+                document.body.innerHTML = ''
+                return;
                 } else if (player1score > player2score) {
                     winner = player1;
                 } else if (player2score > player1score) {
@@ -123,6 +131,7 @@ function init () {
                 }
                 document.getElementById('finalQuestion').innerText = `ANSWER: ${finalanswer}`
                 window.alert(`Congrats! ${winner} won the game!!!\nPlayer 1: ${player1score} | Player 2: ${player2score}`)
+                window.alert(`The final answer was ${finalanswer}`)
                 window.alert(`Thank you for playing my game!`)
                 document.body.innerHTML = ''
                 return;

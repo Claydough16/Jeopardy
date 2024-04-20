@@ -27,164 +27,173 @@ let player2score = 0;
 player1score = parseInt(GetURLParameter("player1"));
 player2score = parseInt(GetURLParameter("player2"));
 
-let answers = {
+let categoryContent = {
     secondCategory1_400: {
-        answer: "Canberra",
-        question: "What is the capital of Australia?",
+        answer: ["Vicory Royale", "A Victory Royale", "A victory royale"],
+        question: "What message is displayed on the player's screen when they win a match?",
         points: 400
     },
     secondCategory1_800: {
-        answer: "F. Scott Fitzgerald",
-        question: "Who wrote 'The Great Gatsby'?",
+        answer: ["25", "Twenty five"],
+        question: "How much shield does a 'mini potion' award the player?",
         points: 800
     },
     secondCategory1_1200: {
-        answer: "Na",
-        question: "What is the chemical symbol for sodium?",
+        answer: ["V-Bucks", "V Bucks"],
+        question: "What is the in-game currency used to purchase cosmetics and Battle Pass tiers in Fortnite?",
         points: 1200
     },
     secondCategory1_1600: {
-        answer: "Earth",
-        question: "Which planet is known as the 'Blue Planet'?",
+        answer: ["Hades Whip", "Chains of Hades", "Hades Chains"],
+        question: "What weapon themed after Hades allowed players to yank other players towards them?",
         points: 1600
     },
     secondCategory1_2000: {
-        answer: "Nile",
-        question: "What is the longest river in the world?",
+        answer: ["Battle Bus"],
+        question: "What is the name of the vehicle that drops players onto the island at the beginning of each Fortnite match?",
         points: 2000
     },
     secondCategory2_400: {
-        answer: "Edvard Munch",
-        question: "Who painted 'The Scream'?",
+        answer: ["Shotgun", "shotgun"],
+        question: "What type of weapon is known for its close-range damage and effectiveness in Fortnite?",
         points: 400
     },
     secondCategory2_800: {
-        answer: "Greenland",
-        question: "What is the largest island in the world?",
+        answer: ["Supply Llama", "Llama", "Loot Llama", "Loot llama"],
+        question: "What is the name of the loot piñata found randomly throughout the map in Fortnite?",
         points: 800
     },
     secondCategory2_1200: {
-        answer: "Indian Rupee",
-        question: "What is the currency of India?",
+        answer: ["Thunderbolt of Zues", "Zues's Thunderbolt", "Thunderbolt", "Zues's Lightning"],
+        question: "Which weapon was introduced in Fortnite that allowed the player to throw lightning?",
         points: 1200
     },
     secondCategory2_1600: {
-        answer: "Herman Melville",
-        question: "Who wrote 'Moby Dick'?",
+        answer: ["Cuddle Team Leader"],
+        question: "Which skin features a pink bear costume and is one of the iconic outfits in Fortnite?",
         points: 1600
     },
     secondCategory2_2000: {
-        answer: "He",
-        question: "What is the chemical symbol for helium?",
+        answer: ["Slurp Juice", "Slurp"],
+        question: "What consumable item gradually restores health and shield over time in Fortnite?",
         points: 2000
     },
     secondCategory3_400: {
-        answer: "Philippine Sea",
-        question: "What is the largest sea in the world?",
+        answer: ["Pleasant Park"],
+        question: "Which location on the Fortnite map is known for its suburban houses and football field?",
         points: 400
     },
     secondCategory3_800: {
-        answer: "Fabian Gottlieb von Bellingshausen",
-        question: "Who was the first person to set foot on Antarctica?",
+        answer: ["Drum Gun"],
+        question: "Which assault rifle uses a drum magazine and is known to be inaccurate?",
         points: 800
     },
     secondCategory3_1200: {
-        answer: "Africa",
-        question: "What is the hottest continent on Earth?",
+        answer: ["Port-a-Fortress", "Port-a-Fortress", "Port a fort", "Port a Fort"],
+        question: "What throwable item instantly builds a large metal structure when used in Fortnite?",
         points: 1200
     },
     secondCategory3_1600: {
-        answer: "Euclid",
-        question: "Who is known as the 'Father of Geometry'?",
+        answer: ["Thanos", "thanos"],
+        question: "Which Marvel villian appeared in Fortnite with the Infinity Gauntlet?",
         points: 1600
     },
     secondCategory3_2000: {
-        answer: "Ostrich",
-        question: "What is the largest bird in the world?",
+        answer: ["Haunted Hills"],
+        question: "Which location on the Fortnite map is characterized by its spooky theme and cemetery?",
         points: 2000
     },
     secondCategory4_400: {
-        answer: "Brasília",
-        question: "What is the capital of Brazil?",
+        answer: ["Peely"],
+        question: "Which skin features a humanoid banana and became a fan favorite in Fortnite?",
         points: 400
     },
     secondCategory4_800: {
-        answer: "J.D. Salinger",
-        question: "Who wrote 'The Catcher in the Rye'?",
+        answer: ["Rocket Launcher", "RPG"],
+        question: "Which weapon was vaulted in Chapter 2 Season 5 but later reintroduced with balancing adjustments?",
         points: 800
     },
     secondCategory4_1200: {
-        answer: "Ca",
-        question: "What is the chemical symbol for calcium?",
+        answer: ["Glider Redeploy", "Glider Redeployment"],
+        question: "Which gameplay mechanic allowed players to redeploy their gliders mid-air in earlier seasons of Fortnite?",
         points: 1200
     },
     secondCategory4_1600: {
-        answer: "Mercury",
-        question: "Which planet is known as the 'Evening Star'?",
+        answer: ["Building Materials", "Building Mats", "Mats", "building materials", "mats", "building mats"],
+        question: "Which item allows players to build structures in Fortnite?",
         points: 1600
     },
     secondCategory4_2000: {
-        answer: "Alexander Fleming",
-        question: "Who discovered penicillin?",
+        answer: ["Fortnite World Cup", "Fortnite world cup", "Fornite cup"],
+        question: "What event featured the largest prize pool in Fortnite history, with millions of dollars awarded to winners?",
         points: 2000
     },
     secondCategory5_400: {
-        answer: "Giraffe",
-        question: "What is the tallest animal in the world?",
+        answer: ["Sniper Rifle", "Sniper Rifles", "Snipers", "sniper rifle", "sniper rifles"],
+        question: "Which weapon category in Fortnite includes rifles with scopes for long-range combat?",
         points: 400
     },
     secondCategory5_800: {
-        answer: "Valentina Tereshkova",
-        question: "Who was the first female astronaut?",
+        answer: ["Rift-To-Go", "Rift To Go"],
+        question: "What item allowed players to create a temporary rift, teleporting them to a different location in Fortnite?",
         points: 800
     },
     secondCategory5_1200: {
-        answer: "Saltwater crocodile",
-        question: "What is the largest reptile in the world?",
+        answer: ["Shield Potion", "Shield Pot"],
+        question: "What is the name of the energy shield that players can consume for protection in Fortnite?",
         points: 1200
     },
     secondCategory5_1600: {
-        answer: "Leonardo da Vinci",
-        question: "Who painted the 'Mona Lisa'?",
+        answer: ["Save the World", "Save the world"],
+        question: "What is the name of the campaign mode that Fortnite offers?",
         points: 1600
     },
     secondCategory5_2000: {
-        answer: "Pb",
-        question: "What is the chemical symbol for lead?",
+        answer: ["Tilted Towers"],
+        question: "What is the name of the popular area where the 'sweaty' players would drop in OG Fortnite?",
         points: 2000
     },
     secondCategory6_400: {
-        answer: "Pretoria",
-        question: "What is the capital of South Africa?",
+        answer: ["100", "A hundred", "One hundred"],
+        question: "What is the maximum number of players in a Fortnite Battle Royale match?",
         points: 400
     },
     secondCategory6_800: {
-        answer: "Leo Tolstoy",
-        question: "Who wrote 'War and Peace'?",
+        answer: ["Pickaxe"],
+        question: "What is the name of the default harvesting tool in Fortnite?",
         points: 800
     },
     secondCategory6_1200: {
-        answer: "K",
-        question: "What is the chemical symbol for potassium?",
+        answer: ["Reboot Van", "Reboot Van"],
+        question: "What in-game feature allows teammates to revive eliminated players by collecting their Reboot Cards?",
         points: 1200
     },
     secondCategory6_1600: {
-        answer: "Vigdís Finnbogadóttir",
-        question: "Who was the first female president of a country?",
+        answer: ["Mythic", "mythic"],
+        question: "What is the rarest item type in Fortnite?",
         points: 1600
     },
     secondCategory6_2000: {
-        answer: "Femur",
-        question: "What is the largest bone in the human body?",
+        answer: ["Battle Pass", "battle pass"],
+        question: "What is the seasonal subscription service that offers exclusive rewards and challenges in Fortnite?",
         points: 2000
     }
 };
 
-let questionLimit = Object.keys(answers).length;
+// Fornite themed per request from the wife lol
+
+let questionLimit = Object.keys(categoryContent).length;
+
+function nextRound() {
+    document.getElementById("guessButton2").setAttribute("disabled", "disabled");
+    document.getElementById("passButton2").setAttribute("disabled", "disabled");
+    document.getElementById("input").setAttribute("disabled", "disabled");
+    document.getElementById("nextRoundButton2").removeAttribute("disabled");
+    document.getElementById("mainDiv2").innerHTML = "";
+}
 
 function init() {
-
-    
+    document.getElementById("currentPlayerTurn").innerText = `${playerTurn}'s Turn`    
     document.getElementById('guessButton2').setAttribute("disabled", "disabled")
     document.getElementById('passButton2').setAttribute("disabled", "disabled")
     document.getElementById('nextRoundButton2').setAttribute("disabled", "disabled")
@@ -194,14 +203,14 @@ function init() {
 
     window.alert(`It's ${playerTurn}'s turn!`)
 
-    Object.keys(answers).map((value) => {
+    Object.keys(categoryContent).map((value) => {
         document.getElementById(value).addEventListener('click', function questionHandler(e) {
             if (currentQuestion != "") {
                 window.alert("You must answer or pass the question first!");
                 return;
             }
             questionAttempts = 0;
-            document.getElementById(value).innerHTML = `<p>${answers[value].question}</p>`;
+            document.getElementById(value).innerHTML = `<p>${categoryContent[value].question}</p>`;
             currentQuestion = value;
             document.getElementById('guessButton2').removeAttribute("disabled")
             document.getElementById('passButton2').removeAttribute("disabled")
@@ -210,29 +219,35 @@ function init() {
     });
 
     document.getElementById('guessButton2').addEventListener('click', (e) => {
-        if (document.getElementById('input').value == answers[currentQuestion].answer) {
+        if (categoryContent[currentQuestion].answer.includes(document.getElementById('input').value)) {
             if (playerTurn == player1) {
-                player1score += answers[currentQuestion].points;
+                player1score += categoryContent[currentQuestion].points;
                 document.getElementById('player1score').innerText = `${player1score}`
+                document.getElementById("input").value = "";
                 document.getElementById(currentQuestion).innerHTML = "";
                 currentQuestion = "";
+                window.alert(`Correct!!`)
             }
             else if (playerTurn == player2) {
-                player2score += answers[currentQuestion].points;
+                player2score += categoryContent[currentQuestion].points;
                 document.getElementById('player2score').innerText = `${player2score}`
+                document.getElementById("input").value = "";
                 document.getElementById(currentQuestion).innerHTML = "";
                 currentQuestion = "";
+                window.alert(`Correct!!`)
             }
             questionsAnswered++;
         } else {
             if (playerTurn == player1) {
-                player1score -= answers[currentQuestion].points;
+                player1score -= categoryContent[currentQuestion].points;
                 document.getElementById('player1score').innerText = `${player1score}`
+                document.getElementById("input").value = "";
                 questionAttempts++;
                 playerTurn = player2;
             } else if (playerTurn == player2) {
-                player2score -= answers[currentQuestion].points;
+                player2score -= categoryContent[currentQuestion].points;
                 document.getElementById('player2score').innerText = `${player2score}`
+                document.getElementById("input").value = "";
                 questionAttempts++;
                 playerTurn = player1;
             }
@@ -241,22 +256,33 @@ function init() {
                 window.alert(`${playerTurn}, it's your chance to guess!`);
             } else {
                 document.getElementById(currentQuestion).innerHTML = "";
+                currentQuestion = "";
                 questionsAnswered++;
             }
         }
+        document.getElementById("currentPlayerTurn").innerText = `${playerTurn}'s Turn`
         if (questionsAnswered == questionLimit || player1score >= 30000 || player2score >= 30000) {
             window.alert("Time for Final Jeopardy! Click the Final Round Button to advance.")
-            document.getElementById('nextRoundButton2').removeAttribute('disabled');
+            nextRound();
         }
     })
 
     document.getElementById('passButton2').addEventListener('click', (e) => {
+        questionAttempts++;
         if (playerTurn == player1) {
             playerTurn = player2;
         } else {
             playerTurn = player1;
         }
-        window.alert(`It's ${playerTurn}'s turn!`);
+        if (questionAttempts < 2) {
+            window.alert(`${playerTurn}, it's your chance to guess!`);
+        } else {
+            window.alert(`The answer was ${categoryContent[currentQuestion].answer[0]}`)
+            document.getElementById(currentQuestion).innerHTML = "";
+            currentQuestion = "";
+            questionsAnswered++;
+        }
+        document.getElementById("currentPlayerTurn").innerText = `${playerTurn}'s Turn`
     });
 
     document.getElementById('nextRoundButton2').addEventListener('click', (e) => {
